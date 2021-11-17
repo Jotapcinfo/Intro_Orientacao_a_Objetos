@@ -30,7 +30,7 @@ public class aulaPOO {
 		f2.valorPorHora = sc.nextDouble();
 		f2.horas = sc.nextInt();
 
-		double total = f1.valorPorHora * f1.horas + f2.valorPorHora * f2.horas;
+		double total = f1.total() + f2.total();
 
 		System.out.printf("Total = %.2f%n", total);
 	}
