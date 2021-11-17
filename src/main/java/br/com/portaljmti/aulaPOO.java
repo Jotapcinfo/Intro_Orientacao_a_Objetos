@@ -9,25 +9,28 @@ public class aulaPOO {
 
 	public static void main(String[] args) {
 		SpringApplication.run(aulaPOO.class, args);
-		
+
 		Locale.setDefault(Locale.US); // Para ler com o ponto na casa decimal
 		Scanner sc = new Scanner(System.in);
 
-		String nome1, nome2;
-		double valorPorHora1, valorPorHora2, total;
-		int horas1, horas2;
+		// Declarando as variáveis do tipo funcionario
+		Funcionario f1, f2;
+
+		// Instanciando (Criando) os objetos
+		f1 = new Funcionario();
+		f2 = new Funcionario();
 
 		System.out.println("Dados do primeiro funcionário: ");
-		nome1 = sc.next(); // Ler uma string sem espaço em branco
-		valorPorHora1 = sc.nextDouble();
-		horas1 = sc.nextInt();
+		f1.nome = sc.next(); // Ler uma string sem espaço em branco
+		f1.valorPorHora = sc.nextDouble();
+		f1.horas = sc.nextInt();
 
 		System.out.println("Dados do segundo funcionário: ");
-		nome2 = sc.next(); // Ler uma string sem espaço em branco
-		valorPorHora2 = sc.nextDouble();
-		horas2 = sc.nextInt();
+		f2.nome = sc.next(); // Ler uma string sem espaço em branco
+		f2.valorPorHora = sc.nextDouble();
+		f2.horas = sc.nextInt();
 
-		total = valorPorHora1 * horas1 + valorPorHora2 * horas2;
+		double total = f1.valorPorHora * f1.horas + f2.valorPorHora * f2.horas;
 
 		System.out.printf("Total = %.2f%n", total);
 	}
